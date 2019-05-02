@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  font-size: 12px;
+  /* border: 1px solid black; */
+  border-bottom: 1px solid rgb(68, 161, 240);
+  width: 80%;
+  margin: 300px auto;
+  padding: 10px;
+  /* position: relative; */
+}
+
+.list-tile {
+  background-color: pink;
+  border-radius: 10px;
+  color: white;
+  margin: 5px;
+  padding: 3px;
+}
+
+.list-tile > button {
+  background: transparent;
+  border: transparent;
+  color: white;
+}
+
+.list-tile > button:hover{
+  cursor: pointer;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: auto;
+  /* position: absolute;
+  right: 0; */
+}
