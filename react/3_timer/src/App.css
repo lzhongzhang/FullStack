@@ -1,0 +1,35 @@
+.container {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 20px auto;
+  position: relative;
+}
+
+.number {
+  font-size: 100px;
+  display: flex;
+  /*text-align: center;*/
+  /*margin-top: 50px;*/
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+}
+
+.btn > button {
+  width: 50%;
+  height: 100%;
+  font-size: 20px;
+  background-color: purple;
+  color: white;
+}
+
+.btn > button:hover {
+  cursor: pointer;
+}
