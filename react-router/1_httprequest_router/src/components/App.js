@@ -8,11 +8,12 @@ import Detail from './Detail';
 class App extends React.Component {
     render() {
         const withRouterDetail = withRouter(Detail);
+        const withRouterList = withRouter(List);
         return (
             <BrowserRouter>
                 <Switch>
                     <Route exact={true} path="/" component={Home} />
-                    <Route exact={true} path="/users" component={List} /> 
+                    <Route exact={true} path="/users" component={withRouterList} /> 
                     <Route path="/users/:login" component={withRouterDetail} /> 
                 </Switch>  
             </BrowserRouter>

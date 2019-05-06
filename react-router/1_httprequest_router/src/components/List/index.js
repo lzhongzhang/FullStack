@@ -39,7 +39,7 @@ class List extends React.Component {
                     {
                         data.map((record, index) => {
                             return (
-                            <tr key = {index}>
+                            <tr key = {index} onClick={() => this.props.history.push(`/users/${record.login}`)}>
                                 <td>{record.id}</td>
                                 <td>{record.login}</td>
                                 <td>
