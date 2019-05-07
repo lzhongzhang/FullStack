@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css';
-// import Logout from './logout';
 
 class LoginFrom extends React.Component { 
     constructor(props) {
@@ -79,17 +78,28 @@ class LoginFrom extends React.Component {
         return (
             !isLogin ? (
             <form className='form' onSubmit={this.handleSubmit}>
-                <label>
-                    Username
-                    <input type="text" value={username} onChange={this.handleChangUserName} />
-                    Password
-                    <input type="text" value={password} onChange={this.handleChangPassword} />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>) : (
                 <div>
+                    <label>
+                        Username
+                        <div>
+                            <input type="text" value={username} onChange={this.handleChangUserName} />
+                        </div>
+                        
+                    </label>
+                    <label>
+                        Password
+                        <div>
+                            <input type="text" value={password} onChange={this.handleChangPassword} />
+                        </div>
+                    </label>
+                </div> 
+                <div>
+                    <input className="btn" type="submit" value="Submit" />
+                </div>
+            </form>) : (
+                <div className="form">
                     <h2>Congrations, you logged in successfully!</h2>
-                    <button onClick={this.handleLogout}>Logout</button>
+                    <button className="btn" onClick={this.handleLogout}>Logout</button>
                 </div>
             )
         );
