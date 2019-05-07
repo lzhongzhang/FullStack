@@ -27,6 +27,10 @@ class List extends React.Component {
         }
     }
 
+    getDetail = userId => {
+        this.props.history.push(`/list/${userId}`);
+    }
+
     render() {
         const { data } = this.state;
         return (
@@ -43,7 +47,7 @@ class List extends React.Component {
                     {
                         data.map((record, index) => {
                             return (
-                            <tr key = {index} onClick={() => this.props.history.push(`/list/${record.login}`)}>
+                            <tr key = {index} onClick={() => this.getDetail(record.login)}>
                                 <td>{record.id}</td>
                                 <td>{record.login}</td>
                                 <td>
