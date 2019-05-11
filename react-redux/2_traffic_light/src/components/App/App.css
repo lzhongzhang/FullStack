@@ -1,0 +1,40 @@
+.container {
+    width: 300px;
+    height: 500px;
+    margin: 200px auto;
+    text-align: center;
+}
+
+.red {
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.green {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black 
+}
+
+.yellow {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black 
+}
+
+.button {
+    margin: 20px auto;
+}
+
+.btn {
+    height: 30px;
+    width: 25%;
+}
+

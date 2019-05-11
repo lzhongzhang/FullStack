@@ -1,42 +1,44 @@
 import React from 'react';
 import './App.css';
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 
 class App extends React.Component {
 
-  render() {
-    const { go, caution, stop } = this.props;
-    return (
-      <div>
-        <div>
+  handleRed = () => {
+    this.props.dispatch({ type: 'CHANGE_RED', color: 'green'});
+  }
 
-        </div>
-        <div>
-          <button onClick={() => go()}></button>
-          <button onClick={() => caution()}></button>
-          <button onClick={() => stop()}></button>
+  handleGreen = () => {
+    this.props.dispatch({ type: 'CHANGE_GREEN', color: 'yellow'});
+  }
+
+  handleYellow = () => {
+    this.props.dispatch({ type: 'CHANGE_YELLOW', color: 'red'});
+  }
+
+
+  render() {
+    const { color } = this.props;
+    return (
+      <div className='container'>
+        <div className='red' style={{background: color === 'red'? 'red' : 'white'}}></div>
+        <br></br>
+        <div className='yellow' style={{background: color === 'yellow'? color: 'white'}}></div>
+        <br></br>
+        <div className='green' style={{background: color === 'green'? color: 'white'}}></div>
+        <br></br>
+        <div className='button'>
+          <button className='btn' onClick={this.handleRed} disabled={color !== 'red'}>Go</button>
+          <button className='btn' onClick={this.handleGreen} disabled={color !== 'green'}>Caution</button>
+          <button className='btn' onClick={this.handleYellow} disabled={color !== 'yellow'}>Stop</button>
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = state => ({
+    color: state.color
+});
 
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    go: () => {
-      dispatch(handleGo());
-    },
-    caution: () => {
-      dispatch(handleCaution());
-    },
-    stop: () => {
-      dispatch(handleStop());
-    }
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
