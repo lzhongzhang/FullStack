@@ -1,6 +1,6 @@
 module.exports = function (app) {
     app.get('/', function (req, res) {
-        res.redirect('./users');
+        res.redirect('/api/users');
     });
-    app.use('/app/users', require('./users'));
+    app.use('/api/users', require('./users'));
 };

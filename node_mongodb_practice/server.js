@@ -6,10 +6,9 @@ const routes = require('./routes');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-//
+
 // const User = require('./models/user');
 
-// app.use ();
 // User.create({name: "Hall", sex: "M", age: 20, title: "Student", startDate: "2019-04-10"}, (err, data) => {
 //     if (err) {
 //         console.log(err);
